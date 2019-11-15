@@ -1,0 +1,23 @@
+{
+  "manifest_version":2,
+  "name": "Mai Wifi",
+  "description": "",
+  "version": "0.1",
+  "permissions": [
+  "tabs","declarativeContent","activeTab","storage"
+  ],
+  "browser_action": {
+    "dafault_icon":"icon.png",
+    "default_popup": "popup_menu.html",
+    "default_title":"wifi pass"
+  },
+  "content_scripts": [
+      {
+      "matches": [
+          "*://wifi.mai.ru/*","*://vk.com/*"
+          ],
+      "js": ["background.js"],
+      "run_at": "document_idle"
+      }
+  ]
+}
