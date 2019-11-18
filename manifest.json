@@ -7,17 +7,21 @@
   "tabs","declarativeContent","activeTab","storage"
   ],
   "browser_action": {
-    "dafault_icon":"icon.png",
     "default_popup": "popup_menu.html",
-    "default_title":"wifi pass"
+    "default_title":"wifi auto enter"
   },
   "content_scripts": [
       {
       "matches": [
-          "*://wifi.mai.ru/*","*://vk.com/*"
-          ],
+          "*://wifi.mai.ru/*","file:///home/pavel/Documents/projects/chromExt/auto_enter_ext/mai_site.html"],
       "js": ["background.js"],
       "run_at": "document_idle"
-      }
-  ]
+      }      
+  ],
+  "background":
+  {
+    "scripts":["check_credits.js"],
+    "persistent":false
+  }
+  
 }
