@@ -13,7 +13,7 @@
   "content_scripts": [
       {
       "matches": [
-          "*://wifi.mai.ru/*","file:///home/pavel/Documents/projects/chromExt/auto_enter_ext/mai_site.html"],
+          "*://wifi.mai.ru/*"],
       "js": ["background.js"],
       "run_at": "document_idle"
       }      

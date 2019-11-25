@@ -41,6 +41,18 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     },false);
     var changeNamePass = document.getElementById("change_credits");
+    document.getElementById("username").addEventListener('keyup', function(event){
+        if(event.keyCode==13){
+            event.preventDefault();
+            searchButton.click();
+        }
+    },false);
+    document.getElementById("password").addEventListener('keyup', function(event){
+        if(event.keyCode==13){
+            event.preventDefault();
+            searchButton.click();
+        }
+    },false);
     chrome.storage.sync.get('username',function(res){
         var username = res.username;
         document.getElementById("username").value=username;
