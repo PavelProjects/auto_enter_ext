@@ -32,7 +32,7 @@ chrome.storage.sync.get(['state','username','password'], function(res){
                 document.getElementsByName("username")[0].value=username; 
                 document.getElementsByName("password")[0].value=password;
                 document.getElementsByClassName("button")[0].click();
-                document.location.href="http://poeblo.epizy.com/img_site.html?i=1";
+                k,kkkjldocument.location.href="http://poeblo.epizy.com/img_site.html?i=1";
             }catch(error){
                 console.log(error);
             }
